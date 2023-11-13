@@ -57,7 +57,7 @@ Todo List API Services using Express JS
 
 ###### /register
 
-URL : http://localhost:5000/api/v1/auth/register
+URL : http://localhost:5000/api/v1/auth/register <br>
 Register a new account by sending a POST request with the following body:
 
 ```
@@ -72,7 +72,25 @@ Register a new account by sending a POST request with the following body:
 
 ###### /login
 
-URL : http://localhost:5000/api/v1/auth/login
+To obtain an access token for managing your TODO-LIST, use this login endpoint.
+
+Example Response:
+
+```
+{
+  "message": "Successfull to login user!",
+  "statusText": "Successfull to login user!",
+  "statusCode": 200,
+  "data": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk4NjY1MTIsImRhdGEiOnsidXNlciI6ImpvaG4iLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20ifSwiaWF0IjoxNjk5ODYyOTEyfQ.OjUzNqCWkm0JQHN-cgGljudo5J0n9D5TAltMowt0M5s",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk4NjY1MTIsImRhdGEiOnsidXNlciI6ImpvaG4iLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20ifSwiaWF0IjoxNjk5ODYyOTEyfQ.OjUzNqCWkm0JQHN-cgGljudo5J0n9D5TAltMowt0M5s",
+    "expired_date": 1699866512,
+    "username": "john"
+  }
+}
+```
+
+URL : http://localhost:5000/api/v1/auth/login <br>
 Log in to an existing account by sending a POST request with the following body:
 
 ```
@@ -88,7 +106,7 @@ Log in to an existing account by sending a POST request with the following body:
 
 ###### /todolist
 
-URL : http://localhost:5000/api/v1/todolist
+URL : http://localhost:5000/api/v1/todolist <br>
 Add a new task by sending a POST request with the following body:
 
 ```
@@ -107,11 +125,29 @@ URL : http://localhost:5000/api/v1/todolist
 Get Task by ID
 URL: http://localhost:5000/api/v1/todolist/{\_id}
 
+Example Get Task by ID:
+URL: http://localhost:5000/api/v1/todolist/6551c34c5510f1360e630cbf
+
+Example Response:
+
+```
+{
+  {
+      "_id": "6551c34c5510f1360e630cbf",
+      "userId": "admin",
+      "task": "Belajar Express js",
+      "created_date": "2023-11-13T06:33:48.557Z",
+      "updated_date": "Mon Nov 13 2023 13:33:48 GMT+0700 (Western Indonesia Time)",
+      "__v": 0
+    }
+}
+```
+
 #### METHOD: PUT
 
 ###### /todolist
 
-URL : http://localhost:5000/api/v1/todolist/{\_id}
+URL : http://localhost:5000/api/v1/todolist/{\_id} <br>
 Update a specific task by ID by sending a PUT request with the following body:
 
 ```
