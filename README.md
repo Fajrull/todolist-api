@@ -82,8 +82,6 @@ Log in to an existing account by sending a POST request with the following body:
 }
 ```
 
-To obtain an access token for managing your TODO-LIST, use this login endpoint.
-
 Example Response:
 
 ```
@@ -99,6 +97,8 @@ Example Response:
   }
 }
 ```
+
+use the access token on the barrier to be able to access the todo-list
 
 ### RUTE-RUTE UNTUK MENGELOLA TODO-LIST
 
