@@ -72,6 +72,16 @@ Register a new account by sending a POST request with the following body:
 
 ###### /login
 
+URL : http://localhost:5000/api/v1/auth/login <br>
+Log in to an existing account by sending a POST request with the following body:
+
+```
+{
+  "username": "username_akun",
+  "password": "password_akun"
+}
+```
+
 To obtain an access token for managing your TODO-LIST, use this login endpoint.
 
 Example Response:
@@ -87,16 +97,6 @@ Example Response:
     "expired_date": 1699866512,
     "username": "john"
   }
-}
-```
-
-URL : http://localhost:5000/api/v1/auth/login <br>
-Log in to an existing account by sending a POST request with the following body:
-
-```
-{
-  "username": "username_akun",
-  "password": "password_akun"
 }
 ```
 
