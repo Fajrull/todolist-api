@@ -14,12 +14,14 @@ const {
 } = require("../../middlewares/authorization/JWT");
 
 routes.get("/", verifyToken, verifyJWTToken, TodoListController.ReadTodoList);
+
 routes.get(
   "/:id",
   verifyToken,
   verifyJWTToken,
   TodoListController.ReadDetailTodoList
 );
+
 routes.post(
   "/",
   verifyToken,
@@ -27,18 +29,21 @@ routes.post(
   TodoListMiddleware.todoValidation,
   TodoListController.CreateTodoList
 );
+
 routes.put(
   "/:id",
   verifyToken,
   verifyJWTToken,
   TodoListController.UpdateTodoList
 );
+
 routes.delete(
   "/:id",
   verifyToken,
   verifyJWTToken,
   TodoListController.DeleteTodoList
 );
+
 routes.delete(
   "/",
   verifyToken,
